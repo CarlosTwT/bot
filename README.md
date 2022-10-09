@@ -3,7 +3,7 @@
 <div align="center">
 <img src="https://telegra.ph/file/c690c8293d8aa06491244.png" alt="SIMPLE MD" width="300" />
 <p align="center">
- <img src="https://komarev.com/ghpvc/?username=xzeera-id&color=blue&label=Views" />
+ <img src="https://komarev.com/ghpvc/?username=CarlosTwT&color=blue&label=Views" />
  </p>
 </p>
 <h1 align="center">SIMPLE MD</h1>
@@ -20,8 +20,8 @@
 
 # ¡Lee esto!
 
-- Cambiar [Config](https://github.com/CarlosTwT/SimpleMD/blob/main/lib/config.json)
-- Nombre de sesión: simple-md.json
+- Cambiar [Config](https://github.com/CarlosTwT/bot/config.json)
+- Nombre de sesión: qrcode.json
 
 # corre en heroku
 
@@ -51,7 +51,7 @@ Bot de WhatsApp multidispositivo
 > pkg install git
 > pkg install ffmpeg && pkg install libwebp
 > pkg install nodejs
-> git clone https://github.com/CarlosTwT/SimpleMD
+> git clone https://github.com/CarlosTwT/bot
 > cd SimpleMD
 > npm install
 > npm start
@@ -112,21 +112,16 @@ pacman -S libwebp
 
 ```bash
 # clone repo
-git clone --depth=1 https://github.com/CarlosTwT/SimpleMD
+git clone --depth=1 https://github.com/CarlosTwT/bot
 
 # cambia tu posición en el directorio
-cd SimpleMD
+cd bot
 
 # instalar todos los módulos
 npm install
 # o
 yarn install
 
-# cuando la biblioteca @adiwajshing/baileys de error, ejecute el siguiente código
-
-cd ./node_modules/@adiwajshing/baileys
-npm install -g typescript
-npm run build:tsc
 ```
 
 ### Iniciar robot
