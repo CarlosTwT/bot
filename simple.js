@@ -1770,6 +1770,12 @@ const x0 = await fetchJson("https://api.popcat.xyz/quote")
 const xo = await fetchJson(`https://api.popcat.xyz/translate?to=es&text=${x0.quote}`)
 reply(xo.translated)
 break
+case 'frase':
+const ok = await fetchJson("https://api.popcat.xyz/showerthoughts")
+const so = await fetchJson(`https://api.popcat.xyz/translate?to=es&text=${ok.showerthoughts}`)
+reply(so.translated)
+break
+
 //|⬡════════════════════════════════════════════|❝ Ⓒ_乂 DESCARGAS - Bot_™ ❞|═══════════════════════════════════════════⬡|//	
     case "gatosad": {
         if (!text) {
