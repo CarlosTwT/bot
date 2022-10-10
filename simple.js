@@ -1910,12 +1910,13 @@ break
  case 'stalkig':
             if (args.length == 0) return reply(`Ejemplo: ${prefix + command} c4rl0s_9e`)
             axios.get(`https://api.lolhuman.xyz/api/stalkig/${args[0]}?apikey=85faf717d0545d14074659ad`).then(({ data }) => {
-                var caption = `Usuario : ${data.result.username}\n
-                Full Name : ${data.result.fullname}\n
-                Posts : ${data.result.posts}\n
-                Seguidores : ${data.result.followers}\n
-                Siguiendo a : ${data.result.following} personas\n
-                Bio : ${data.result.bio}`
+                var caption = `      INSTAGRAM
+Usuario : ${data.result.username}\n
+Full Name : ${data.result.fullname}\n
+Posts : ${data.result.posts}\n
+Seguidores : ${data.result.followers}\n
+Siguiendo a : ${data.result.following} personas\n
+Bio : ${data.result.bio}`
                 simple.sendMessage(from, { image: { url: data.result.photo_profile }, caption })
             })
             break
