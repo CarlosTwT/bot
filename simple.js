@@ -20,6 +20,7 @@ const api = require("caliph-api");
 const hx = require("hxz-api");
 const ra = require("ra-api")
 const TD = require('better-tord');
+const ytdl = require('ytdl-core')
 const { tiktokdlv3 } = require('@bochilteam/scraper') 
 const { ngazap } = require('./media/virtex/ngazap')
 const { JSDOM } = require('jsdom')
