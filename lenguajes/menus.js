@@ -8,6 +8,7 @@
 exports.menu = (prefix) => {
 	return`
 \n   「 GRUPO 」
+
 » ${prefix}react
 
 » ${prefix}join [Gp link]
