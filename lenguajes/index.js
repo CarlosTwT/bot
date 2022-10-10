@@ -1,1 +1,1 @@
-
+exports.ind = require('./menus')
