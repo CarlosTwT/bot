@@ -4111,7 +4111,7 @@ caption: mbc,
 fileLength: "9999999999999",
 pageCount: "-10000",
 mentions:[sender, botmd],
-footer: `_By @${botmd.split("@")[0]}_`,
+footer: `By https://instagram.com/c4rl0s_9e`,
 buttons: buttons,
 headerType: 4,
 contextInfo: {
@@ -4204,7 +4204,7 @@ var liveLocation = generateWAMessageFromContent(m.chat, proto.Message.fromObject
        ${lang.menu(prefix)}
 `,
 "sequenceNumber": "1657237469254001",
-"jpegThumbnail": thumb,
+"jpegThumbnail": menu,
 }
 }), { userJid: m.chat, quoted: m })
 simple.relayMessage(m.chat, liveLocation.message, { messageId: liveLocation.key.id })
