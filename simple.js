@@ -38,11 +38,6 @@ const {
     uploadByBuffer,
     uploadByUrl
 } = require('telegraph-uploader')
-const {
-    color
-} = require('./lib/color')
-//require("http").createServer((_, res) => res.end("Hello World!")).listen(8080)
-
 // Lectura de database
 let kuismath = db.data.game.math = []
 let vote = db.data.others.vote = []
@@ -78,7 +73,6 @@ module.exports = simple = async (simple, m, chatUpdate, store) => {
         const args = body.trim().split(/ +/).slice(1)
         const pushname = m.pushName || "No Name"
         const botNumber = await simple.decodeJid(simple.user.id)
-	const senderNumber = m.sender.split('@')[0]
         const isCreator = [botNumber, ...global.owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
         const itsMe = m.sender == botNumber ? true : false
         const text = q = args.join(" ")
@@ -397,13 +391,10 @@ conteoscmds = `${dataa.value}`
 
 //|⬡════════════════════════════════════════════|❝ Ⓒ_乂 Consola_™ ❞|═══════════════════════════════════════════⬡|//	
 
-                    if (m.message) {
-
+        if (m.message) {
             simple.readMessages([m.key])
-
             console.log(chalk.black(chalk.bgWhite('[ MSG ]')), chalk.black(chalk.bgGreen(new Date)), chalk.black(chalk.bgBlue(budy || m.mtype)) + '\n' + chalk.magenta('=> De'), chalk.green(pushname), chalk.yellow(m.sender) + '\n' + chalk.blueBright('=> En'), chalk.green(m.isGroup ? pushname : 'Private Chat', m.chat))
-
-        } 
+        }
 	
 //|⬡════════════════════════════════════════════|❝ Ⓒ_乂 Reset de los límites ™ ❞|═══════════════════════════════════════════⬡|//	
 
@@ -2042,7 +2033,7 @@ break
 ⭔ Viewers : ${anu.views}
 ⭔ Hace : ${anu.ago}
 ⭔ Autor : ${anu.author.name}
-⭔ Canal : ${anu.aurluthor.}
+⭔ Canal : ${anu.author.url}
 ⭔ Descripción : ${anu.description}
 ⭔ Url : ${anu.url}`,
                     footer: simple.user.name,
@@ -2292,7 +2283,7 @@ case 'song': {
 let sections = []   
 let listmenu = [`ytmp4 ${search.all[0].url}`,`ytmp3 ${search.all[1].url}`,`ytmp4 ${search.all[2].url}`,`ytmp3 ${search.all[3].url}`,`ytmp4 ${search.all[4].url}`,`ytmp3 ${search.all[5].url}`,`ytmp4 ${search.all[6].url}`,`ytmp3 ${search.all[7].url}`,`ytmp4 ${search.all[8].url}`,`ytmp3 ${search.all[9].url}`,`ytmp4 ${search.all[10].url}`,`ytmp3 ${search.all[11].url}`,`ytmp4 ${search.all[12].url}`,`ytmp3 ${search.all[13].url}`,`ytmp4 ${search.all[14].url}`,`ytmp3 ${search.all[15].url}`,`ytmp4 ${search.all[16].url}`,`ytmp3 ${search.all[17].url}`,`ytmp4 ${search.all[18].url}`,`ytmp3 ${search.all[19].url}`]
       let listmenuu = [`MP4: ${search.all[0].title}`,`MP3: ${search.all[1].title}`,`MP4: ${search.all[2].title}`,`MP3: ${search.all[3].title}`,`MP4: ${search.all[4].title}`,`MP3: ${search.all[5].title}`,`MP4: ${search.all[6].title}`,`MP3: ${search.all[7].title}`,`MP4: ${search.all[8].title}`,`MP3: ${search.all[9].title}`,`MP4: ${search.all[10].title}`,`MP3: ${search.all[11].title}`,`MP4: ${search.all[12].title}`,`MP3: ${search.all[13].title}`,`MP4: ${search.all[14].title}`,`MP3: ${search.all[15].title}`,`MP4: ${search.all[16].title}`,`MP3: ${search.all[17].title}`,`MP4: ${search.all[18].title}`,`MP3: ${search.all[19].title}`]
-      let listmenuuu = [`\nDuracion: ${search.all[0].timestamp}\nAutor: ${search.all[0].author.name}`,`\nDuracion: ${search.all[1].timestamp}\nAutor: ${search.all[1].author.name}`,`\nDuracion: ${search.all[2].timestamp}\nAutor: ${search.all[2].author.name}`,`\nDuracion: ${search.all[3].timestamp}\nAutor: ${search.all[3].author.name}`,`\nDuracion: ${search.all[4].timestamp}\nAutor: ${search.all[4].author.name}`,`\n${search.all[5].timestamp}`,`\n${search.all[6].timestamp}`,`\n${search.all[7].timestamp}`,`\n${search.all[8].timestamp}`,`\n${search.all[9].timestamp}`,`\n${search.all[10].timestamp}`,`\n${search.all[11].timestamp}`,`\n${search.all[12].timestamp}`,`\n${search.all[13].timestamp}`,`\n${search.all[14].timestamp}`,`\n${search.all[15].timestamp}`,`\n${search.all[16].timestamp}`,`\n${search.all[17].timestamp}`,`\n${search.all[18].timestamp}`,`\n${search.all[19].timestamp}`]
+      let listmenuuu = [`\nDuracion: ${search.all[0].timestamp}\nAutor: ${search.all[0].author.name}`,`\nDuracion: ${search.all[1].timestamp}\nAutor: ${search.all[1].author.name}`,`\nDuracion: ${search.all[2].timestamp}\nAutor: ${search.all[2].author.name}`,`\nDuracion: ${search.all[3].timestamp}\nAutor: ${search.all[3].author.name}`,`\nDuracion: ${search.all[4].timestamp}\nAutor: ${search.all[4].author.name}`,`\nDuracion: ${search.all[5].timestamp}\nAutor: ${search.all[5].author.name}`,`\nDuracion: ${search.all[6].timestamp}\nAutor: ${search.all[6].author.name}`,`\nDuracion: ${search.all[7].timestamp}\nAutor: ${search.all[7].author.name}`,`\nDuracion: ${search.all[8].timestamp}\nAutor: ${search.all[8].author.name}`,`\nDuracion: ${search.all[9].timestamp}\nAutor: ${search.all[9].author.name}`,`\nDuracion: ${search.all[10].timestamp}\nAutor: ${search.all[10].author.name}`,`\nDuracion: ${search.all[11].timestamp}\nAutor: ${search.all[11].author.name}`,`\nDuracion: ${search.all[12].timestamp}\nAutor: ${search.all[12].author.name}`,`\nDuracion: ${search.all[13].timestamp}\nAutor: ${search.all[13].author.name}`,`\nDuracion: ${search.all[14].timestamp}\nAutor: ${search.all[14].author.name}`,`\nDuracion: ${search.all[15].timestamp}\nAutor: ${search.all[15].author.name}`,`\nDuracion: ${search.all[16].timestamp}\nAutor: ${search.all[16].author.name}`,`\nDuracion: ${search.all[17].timestamp}\nAutor: ${search.all[17].author.name}`,`\nDuracion: ${search.all[18].timestamp}\nAutor: ${search.all[18].author.name}`,`\nDuracion: ${search.all[19].timestamp}\nAutor: ${search.all[19].author.name}`]
       let numero = 1
       let startnum = 0
       let startnumm = 0
