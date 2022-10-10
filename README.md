@@ -20,7 +20,7 @@
 
 # ¡Lee esto!
 
-- Cambiar [Config](https://github.com/CarlosTwT/bot/blob/main/config.json)
+- Cambiar [Config](https://github.com/CarlosTwT/bot/blob/main/config.js)
 - Nombre de sesión: qrcode.json
 
 # corre en heroku
