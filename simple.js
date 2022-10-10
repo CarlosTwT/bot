@@ -118,7 +118,7 @@ module.exports = simple = async (simple, m, chatUpdate, store) => {
 const time = moment.tz('Amercia/Guayaquil').format('HH:mm:ss')
 // FECHA
 var dias = ['/01/', '/02/', '/03/', '/04/', '/05/', '/06/', '/07/', '/08/', '/09/', '/10/', '/11/', '/12/'];
-var meses = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
+var meses = ['domingo', 'lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado'];
 var tgel = new Date();
 var hrs = tgel.getDate();
 var mdias = tgel.getMonth();
@@ -318,7 +318,7 @@ simple.sendMessage(m.chat, { text :teks, }, {quoted: m, thumbnail: fs.readFileSy
 
 
 if (command) {
-await simple.sendPresenceUpdate('paused', m.chat)
+await simple.sendPresenceUpdate('composing', m.chat)
 }
 //fin
 
