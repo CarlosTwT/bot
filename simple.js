@@ -4094,7 +4094,9 @@ const botmd = "593991398786@s.whatsapp.net"
 var mn = '```'
 var rndm = ['pdf','zip','vnd.openxmlformats-officedocument.presentationml.presentation','vnd.openxmlformats-officedocument.spreadsheetml.sheet','vnd.openxmlformats-officedocument.wordprocessingml.document','audio/mpeg','image/jpeg']
 var bycrls = rndm[Math.floor(Math.random() * rndm.length)]
-mbc = `${mn} ${lang.menu(prefix)}
+mbc = `${mn}	      Ⓒ_乂 Simple WhatsApp - Bot_
+       「  INFO BOT 」\n 𝘛𝘰𝘵𝘢𝘭 𝘏𝘪𝘵 𝘚𝘦𝘳𝘷𝘦𝘳 : ${conteocmd} \n 𝘛𝘰𝘵𝘢𝘭 𝘏𝘪𝘵 𝘛𝘰𝘥𝘢𝘺 : ${conteoscmds} \n Prefijo :  ${prefix} \n Nombre : ${botname}\n Owner : ${ownername}\n Runtime : ${runtime(process.uptime())}\n Librería : Baileys-Md
+       ${lang.menu(prefix)}
 ${mn}`
 let buttons = [
 {buttonId: `${prefix}comprarbot`, buttonText: {displayText: 'Comprar Bot'}, type: 1},
