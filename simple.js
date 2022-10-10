@@ -1772,7 +1772,7 @@ reply(xo.translated)
 break
 case 'datorandom':
 const ok = await fetchJson("https://api.popcat.xyz/showerthoughts")
-const so = await fetchJson(`https://api.popcat.xyz/translate?to=es&text=${ok.showerthoughts}`)
+const so = await fetchJson(`https://api.popcat.xyz/translate?to=es&text=${ok.result}`)
 reply(so.translated)
 break
 
