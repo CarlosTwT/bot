@@ -397,10 +397,10 @@ conteoscmds = `${dataa.value}`
 
 //|⬡════════════════════════════════════════════|❝ Ⓒ_乂 Consola_™ ❞|═══════════════════════════════════════════⬡|//	
 
-            if (!isGroup && !isCmd) console.log(color(`[ ${timebro} ]`, 'white'), color('[ PRIVADO ]', 'aqua'), color(body.slice(0, 50), 'white'), 'from', color(senderNumber, 'yellow'))
-    if (isGroup && !isCmd) console.log(color(`[ ${timebro} ]`, 'white'), color('[  GRUPO  ]', 'aqua'), color(body.slice(0, 50), 'white'), 'from', color(senderNumber, 'yellow'), 'in', color(groupName, 'yellow'))
-    if (!isGroup && isCmd) console.log(color(`[ ${timebro} ]`, 'white'), color('[ COMANDO ]', 'aqua'), color(body, 'white'), 'from', color(senderNumber, 'yellow'))
-    if (isGroup && isCmd) console.log(color(`[ ${timebro} ]`, 'white'), color('[ COMANDO ]', 'aqua'), color(body, 'white'), 'from', color(senderNumber, 'yellow'), 'in', color(groupName, 'yellow'))
+            if (!m.isGroup && !isCmd) console.log(color(`[ ${timebro} ]`, 'white'), color('[ PRIVADO ]', 'aqua'), color(body.slice(0, 50), 'white'), 'from', color(m.sender, 'yellow'))
+    if (m.isGroup && !isCmd) console.log(color(`[ ${timebro} ]`, 'white'), color('[  GRUPO  ]', 'aqua'), color(body.slice(0, 50), 'white'), 'from', color(m.sender, 'yellow'), 'in', color(groupName, 'yellow'))
+    if (!m.isGroup && isCmd) console.log(color(`[ ${timebro} ]`, 'white'), color('[ COMANDO ]', 'aqua'), color(body, 'white'), 'from', color(m.sender, 'yellow'))
+    if (m.isGroup && isCmd) console.log(color(`[ ${timebro} ]`, 'white'), color('[ COMANDO ]', 'aqua'), color(body, 'white'), 'from', color(m.sender, 'yellow'), 'in', color(groupName, 'yellow'))
     
 	
 //|⬡════════════════════════════════════════════|❝ Ⓒ_乂 Reset de los límites ™ ❞|═══════════════════════════════════════════⬡|//	
