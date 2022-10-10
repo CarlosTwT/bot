@@ -1775,11 +1775,12 @@ const ok = await fetchJson("https://api.popcat.xyz/showerthoughts")
 const so = await fetchJson(`https://api.popcat.xyz/translate?to=es&text=${ok.result}`)
 reply(so.translated)
 break
-case 'chatbot':{
+case 'chatbot':
 if (!text) throw 'no hay texto a responder...'
 const bot = await fetchJson(`https://api.popcat.xyz/chatbot?msg=${text}&owner=Carlos+Priv&botname=Simple+Bot`)
 const pre = await fetchJson(`https://api.popcat.xyz/translate?to=es&text=${bot.response}`)
 reply(pre.translated)
+break
 //|⬡════════════════════════════════════════════|❝ Ⓒ_乂 DESCARGAS - Bot_™ ❞|═══════════════════════════════════════════⬡|//	
     case "gatosad": {
         if (!text) {
