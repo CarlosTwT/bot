@@ -671,6 +671,29 @@ Porfavor @${m.mentionedJid[0].split`@`[0]} escribe Aceptar/Rechazar`
                 }
             }
             break
+    case 'modena': {
+        const side = Math.floor(Math.random() * 2) + 1
+        if (side == 1) {
+            sock.sendMessage(from, {
+                image: {
+                    url: 'https://i.ibb.co/LJjkVK5/heads.png'
+                },
+                caption: "cara"
+            }, {
+                quoted: m
+            })
+        } else {
+            sock.sendMessage(from, {
+                image: {
+                    url: 'https://i.ibb.co/wNnZ4QD/tails.png'
+                },
+                caption: "cruz"
+            }, {
+                quoted: m
+            })
+        }
+    }
+    break
             case 'pareja': {
              if (!isPremium && global.db.data.users[m.sender].limit < 1) return reply(mess.endLimit) //
 		            db.data.users[m.sender].limit -= 1 // -1 limit
@@ -1735,6 +1758,11 @@ break
 case 'casos':
 const x16 = await fetchJson("https://nekos.life/api/v2/fact")
 const x17 = await fetchJson(`https://api.popcat.xyz/translate?to=es&text=${x16.fact}`)
+reply(x17.translated)
+break
+case 'citaciones':
+const x16 = await fetchJson("https://api.popcat.xyz/quote")
+const x17 = await fetchJson(`https://api.popcat.xyz/translate?to=es&text=${x16.quote}`)
 reply(x17.translated)
 break
 //|⬡════════════════════════════════════════════|❝ Ⓒ_乂 DESCARGAS - Bot_™ ❞|═══════════════════════════════════════════⬡|//	
