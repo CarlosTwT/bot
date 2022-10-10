@@ -2,6 +2,10 @@
    * Create By Carlos...
    * Contact Me on wa.me/593991398786
    * Follow https://instagram.com/c4rl0s_9e
+   * Esta sc es totalmente gratuita, no permito que sea usada para fines comerciales.
+   * No me hago responsable del mal uso de este bot.
+   * Si vas a modificar algo, no remuevas los creditos.
+   * Gracias a l0os distintos creadores de bots por ayudar en la creacion de este sc.
 */
 
 process.on('uncaughtException', console.error) //Safe Log Error
@@ -3784,101 +3788,7 @@ El uso de © ঔৣ͜͡Ⓒ_乂 Simple WhatsApp - Bot_ 愛 es 100% gratuito, tú 
 }, { quoted: m })
             }
             break
-	    case 'rcompra': {
-                simple.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/149e775adfaa5e719d3a5.png' }, caption: `
-*❒ 「 Terminos de Compra 」 ❒
-
-→Al momento de Efectuar la compra de © ঔৣ͜͡Ⓒ_乂 Simple WhatsApp - Bot_ 愛 se tomarán en cuenta los siguientes aspectos
-
-→Al momento de Donarme, se te otorgará unos beneficios a manera de agradecimiento, ya que tu ayuda es muy importante para mantener al bot actualizado y en mantenimiento.
-
-
-1•_ Se verificará que el pago sea legítimo, con comprobante. todo al creador del bot.
-
-2•_ Solo se dará la versión por la que hayas pagado.
-
-3•_.El bot será completamente tuyo, y podrás disfrutar de los beneficios.
-
-4•_No se aceptad devoluciones.
-
-5•_ Comprueba los precios en ${prefix}comprarbot.
-
-Al comprar este bot me estás apoyando a crecer y mantener este bot, Gracias de antemano.. Att © ঔৣ͜͡Ⓒ_乂 Simple WhatsApp - Bot_ 愛.*` 
-}, { quoted: m })
-            }
-            break
-            case 'comprarbot': {
-                let anu = `
-┌────────┈❖
-│「 Hola, ${pushname}👋 」
-│「 ${timebro} 」
-└┬─────────────┈❖
-┌┤「 COMPRAR BOT 」
-│└─────────────┈❖
-│⭔ Bot 100% Completo 10$ usd
-│⭔ Bot +50Cmd Sin mis Apis 3$ usd
-│⭔ Bot +100Cmd Y Template Buttons 5$ usd
-│⭔ Bot +200Cmd y Template + apis 7$ usd
-└┬─────────────┈❖
-┌┤「 PAGO 」
-│└─────────────┈❖
-│⭔ PayPal : ${global.paypal}
-└┬─────────────┈❖
-┌┤「 VENTAJAS 」
-│└─────────────┈❖
-│⭔Bot 100% Editable 
-│⭔ Host Vps/Heroku/Oktote/BoxMineHost
-│⭔100% tuyo
-│⭔ Comandos funcionales
-│⭔ Antilink
-│⭔ Welcome
-│⭔ Despedida
-└┬─────────────┈❖
-┌┤「 SISTEMA 」
-│└─────────────┈❖
-│⭔ Enviar prueba de pago » y el » Bot es tuyo
-└──────────────┈❖
-`
-                let btn = [{
-                                urlButton: {
-                                    displayText: 'PayPal',
-                                    url: 'https://www.paypal.me/CarlosTwT'
-                                }
-                            }, {
-                                callButton: {
-                                    displayText: 'número Owner',
-                                    phoneNumber: '+593 99 139 8786'
-                                }
-                            }, {
-                                quickReplyButton: {
-                                    displayText: 'Reglas de Compra',
-                                    id: `${prefix}rcompra`
-                                }
-                            }, {
-                                quickReplyButton: {
-                                    displayText: 'Donar',
-                                    id: `${prefix}donar`
-                                }
-                            }, {
-                                quickReplyButton: {
-                                    displayText: 'Vcard Owner',
-                                    id: `${prefix}owner`
-                                }
-                            }]
-                         let setbot = db.data.settings[botNumber]
-                        if (setbot.templateImage) {
-                        simple.send5ButImg(m.chat, anu, simple.user.name, global.thumb, btn, global.thumb)
-                        } else if (setbot.templateGif) {
-                        simple.send5ButGif(m.chat, anu, simple.user.name, global.pp_video, btn, global.thumb)
-                        } else if (setbot.templateVid) {
-                        simple.send5ButVid(m.chat, anu, simple.user.name, global.pp_video, btn, global.thumb)
-                        } else if (setbot.templateMsg) {
-                        simple.send5ButMsg(m.chat, anu, simple.user.name, btn)
-                        } else if (setbot.templateLocation) {
-                        simple.send5ButLoc(m.chat, anu, simple.user.name, global.thumb, btn)
-                        }
-                     }
-            break
+	  
             case 'sc': {
                 let anu = `
 ❒ 「 Base 」 ❒
@@ -3889,7 +3799,7 @@ SimpleBot: https://github.com/CarlosTwT
                 let btn = [{
                                 urlButton: {
                                     displayText: 'Instagran',
-                                    url: 'https://github.com/c4rl0s_9e'
+                                    url: 'https://instagram.com/c4rl0s_9e'
                                 }
                             }, {
                                 callButton: {
@@ -4061,12 +3971,6 @@ Si entiende las reglas, por favor escriba *menu* para comenzar!
                 ]
                 },
                 {
-                title: "COMPRARME >_<",
-                rows: [
-                {title: "⌲ 「 BUY ME 」", rowId: `${prefix}comprarbot`, description: `mira mis planes de compra.`}
-                ]
-                },
-                {
                 title: "ACTIVIDAD DEL BOT >_<",
                 rows: [
                 {title: "⌲ 「 Runtime 」", rowId: `${prefix}runtime`, description: `click para mi tiempo activo`}
@@ -4101,7 +4005,7 @@ mbc = `${mn}	      Ⓒ_乂 Simple WhatsApp - Bot_
        ${lang.menu(prefix)}
 ${mn}`
 let buttons = [
-{buttonId: `${prefix}comprarbot`, buttonText: {displayText: 'Comprar Bot'}, type: 1},
+{buttonId: `${prefix}runtime`, buttonText: {displayText: 'Actividad'}, type: 1},
 {buttonId: `${prefix}rules`, buttonText: {displayText: 'Reglas'}, type: 1}
 ]
 let buttonMessage = {
