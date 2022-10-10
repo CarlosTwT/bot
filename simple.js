@@ -2042,7 +2042,7 @@ break
 ⭔ Viewers : ${anu.views}
 ⭔ Hace : ${anu.ago}
 ⭔ Autor : ${anu.author.name}
-⭔ Canal : ${anu.author.url}
+⭔ Canal : ${anu.aurluthor.}
 ⭔ Descripción : ${anu.description}
 ⭔ Url : ${anu.url}`,
                     footer: simple.user.name,
@@ -2291,8 +2291,8 @@ case 'song': {
   let search = await yts(text)                   
 let sections = []   
 let listmenu = [`ytmp4 ${search.all[0].url}`,`ytmp3 ${search.all[1].url}`,`ytmp4 ${search.all[2].url}`,`ytmp3 ${search.all[3].url}`,`ytmp4 ${search.all[4].url}`,`ytmp3 ${search.all[5].url}`,`ytmp4 ${search.all[6].url}`,`ytmp3 ${search.all[7].url}`,`ytmp4 ${search.all[8].url}`,`ytmp3 ${search.all[9].url}`,`ytmp4 ${search.all[10].url}`,`ytmp3 ${search.all[11].url}`,`ytmp4 ${search.all[12].url}`,`ytmp3 ${search.all[13].url}`,`ytmp4 ${search.all[14].url}`,`ytmp3 ${search.all[15].url}`,`ytmp4 ${search.all[16].url}`,`ytmp3 ${search.all[17].url}`,`ytmp4 ${search.all[18].url}`,`ytmp3 ${search.all[19].url}`]
-      let listmenuu = [`MP3: ${search.all[0].title}`,`MP3: ${search.all[1].title}`,`MP4: ${search.all[2].title}`,`MP3: ${search.all[3].title}`,`MP4: ${search.all[4].title}`,`MP3: ${search.all[5].title}`,`MP4: ${search.all[6].title}`,`MP3: ${search.all[7].title}`,`MP4: ${search.all[8].title}`,`MP3: ${search.all[9].title}`,`MP4: ${search.all[10].title}`,`MP3: ${search.all[11].title}`,`MP4: ${search.all[12].title}`,`MP3: ${search.all[13].title}`,`MP4: ${search.all[14].title}`,`MP3: ${search.all[15].title}`,`MP4: ${search.all[16].title}`,`MP3: ${search.all[17].title}`,`MP4: ${search.all[18].title}`,`MP3: ${search.all[19].title}`]
-      let listmenuuu = [`\n${search.all[0].timestamp}`,`\n${search.all[1].timestamp}`,`\n${search.all[2].timestamp}`,`\n${search.all[3].timestamp}`,`\n${search.all[4].timestamp}`,`\n${search.all[5].timestamp}`,`\n${search.all[6].timestamp}`,`\n${search.all[7].timestamp}`,`\n${search.all[8].timestamp}`,`\n${search.all[9].timestamp}`,`\n${search.all[10].timestamp}`,`\n${search.all[11].timestamp}`,`\n${search.all[12].timestamp}`,`\n${search.all[13].timestamp}`,`\n${search.all[14].timestamp}`,`\n${search.all[15].timestamp}`,`\n${search.all[16].timestamp}`,`\n${search.all[17].timestamp}`,`\n${search.all[18].timestamp}`,`\n${search.all[19].timestamp}`]
+      let listmenuu = [`MP4: ${search.all[0].title}`,`MP3: ${search.all[1].title}`,`MP4: ${search.all[2].title}`,`MP3: ${search.all[3].title}`,`MP4: ${search.all[4].title}`,`MP3: ${search.all[5].title}`,`MP4: ${search.all[6].title}`,`MP3: ${search.all[7].title}`,`MP4: ${search.all[8].title}`,`MP3: ${search.all[9].title}`,`MP4: ${search.all[10].title}`,`MP3: ${search.all[11].title}`,`MP4: ${search.all[12].title}`,`MP3: ${search.all[13].title}`,`MP4: ${search.all[14].title}`,`MP3: ${search.all[15].title}`,`MP4: ${search.all[16].title}`,`MP3: ${search.all[17].title}`,`MP4: ${search.all[18].title}`,`MP3: ${search.all[19].title}`]
+      let listmenuuu = [`\nDuracion: ${search.all[0].timestamp}\nAutor: ${search.all[0].author.name}`,`\nDuracion: ${search.all[1].timestamp}\nAutor: ${search.all[1].author.name}`,`\nDuracion: ${search.all[2].timestamp}\nAutor: ${search.all[2].author.name}`,`\nDuracion: ${search.all[3].timestamp}\nAutor: ${search.all[3].author.name}`,`\nDuracion: ${search.all[4].timestamp}\nAutor: ${search.all[4].author.name}`,`\n${search.all[5].timestamp}`,`\n${search.all[6].timestamp}`,`\n${search.all[7].timestamp}`,`\n${search.all[8].timestamp}`,`\n${search.all[9].timestamp}`,`\n${search.all[10].timestamp}`,`\n${search.all[11].timestamp}`,`\n${search.all[12].timestamp}`,`\n${search.all[13].timestamp}`,`\n${search.all[14].timestamp}`,`\n${search.all[15].timestamp}`,`\n${search.all[16].timestamp}`,`\n${search.all[17].timestamp}`,`\n${search.all[18].timestamp}`,`\n${search.all[19].timestamp}`]
       let numero = 1
       let startnum = 0
       let startnumm = 0
