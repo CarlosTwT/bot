@@ -1756,9 +1756,14 @@ break
     }
     break    
 case 'casos':
-const x1 = await fetchJson("https://nekos.life/api/v2/fact")
-const x168 = await fetchJson(`https://api.popcat.xyz/translate?to=es&text=${x1.fact}`)
-reply(x168.translated)
+const x16 = await fetchJson("https://nekos.life/api/v2/fact")
+const x17 = await fetchJson(`https://api.popcat.xyz/translate?to=es&text=${x16.fact}`)
+reply(x17.translated)
+break
+case 'consejo':
+const x1 = await fetchJson("https://api.adviceslip.com/advice")
+const x7 = await fetchJson(`https://api.popcat.xyz/translate?to=es&text=${x1.slip.advice}`)
+reply(x7.translated)
 break
 //|⬡════════════════════════════════════════════|❝ Ⓒ_乂 DESCARGAS - Bot_™ ❞|═══════════════════════════════════════════⬡|//	
     case "gatosad": {
