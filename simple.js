@@ -1760,20 +1760,11 @@ const x16 = await fetchJson("https://nekos.life/api/v2/fact")
 const x17 = await fetchJson(`https://api.popcat.xyz/translate?to=es&text=${x16.fact}`)
 reply(x17.translated)
 break
-    case 'consejo': {
-        await axios
-            .get(`https://api.adviceslip.com/advice`)
-            .then((response) => {
-                // console.log(response);
-                const tet = `Consejos para ti:~> ${response.data.slip.advice}`
-               const xgod = await fetchJson(`https://api.popcat.xyz/translate?to=es&text=${tet.response.data.slip.advice}`) 
-                reply(xgod.translated)
-            })
-            .catch((err) => {
-                reply(`🔍 Error: ${err}`)
-            })
-    }
-    break
+case 'consejo':
+const x16 = await fetchJson("https://api.adviceslip.com/advice")
+const x17 = await fetchJson(`https://api.popcat.xyz/translate?to=es&text=${x16.slip.advice}`)
+reply(x17.translated)
+break
 //|⬡════════════════════════════════════════════|❝ Ⓒ_乂 DESCARGAS - Bot_™ ❞|═══════════════════════════════════════════⬡|//	
     case "gatosad": {
         if (!text) {
