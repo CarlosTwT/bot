@@ -1760,12 +1760,12 @@ const x16 = await fetchJson("https://nekos.life/api/v2/fact")
 const x17 = await fetchJson(`https://api.popcat.xyz/translate?to=es&text=${x16.fact}`)
 reply(x17.translated)
 break
-    case 'adv': {
+    case 'casos': {
         await axios
             .get(`https://api.popcat.xyz/quote`)
             .then((response) => {
                 // console.log(response);
-                const tet = `Advice for you:~> ${response.quote}`
+                const tet = `Advice for you:~> ${response.data.slip.quote}`
                 reply(tet)
             })
             .catch((err) => {
