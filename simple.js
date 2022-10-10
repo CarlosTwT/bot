@@ -1766,7 +1766,8 @@ break
             .then((response) => {
                 // console.log(response);
                 const tet = `Consejos para ti:~> ${response.data.slip.advice}`
-                reply(tet)
+               const xgod = await fetchJson(`https://api.popcat.xyz/translate?to=es&text=${tet.response.data.slip.advice}`) 
+                reply(xgod.translated)
             })
             .catch((err) => {
                 reply(`🔍 Error: ${err}`)
