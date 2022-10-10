@@ -676,10 +676,10 @@ Porfavor @${m.mentionedJid[0].split`@`[0]} escribe Aceptar/Rechazar`
                 }
             }
             break
-    case 'modena': {
+    case 'moneda': {
         const side = Math.floor(Math.random() * 2) + 1
         if (side == 1) {
-            sock.sendMessage(from, {
+            simple.sendMessage(from, {
                 image: {
                     url: 'https://i.ibb.co/LJjkVK5/heads.png'
                 },
@@ -688,7 +688,7 @@ Porfavor @${m.mentionedJid[0].split`@`[0]} escribe Aceptar/Rechazar`
                 quoted: m
             })
         } else {
-            sock.sendMessage(from, {
+            simple.sendMessage(from, {
                 image: {
                     url: 'https://i.ibb.co/wNnZ4QD/tails.png'
                 },
