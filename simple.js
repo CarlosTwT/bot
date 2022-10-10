@@ -38,6 +38,11 @@ const {
     uploadByBuffer,
     uploadByUrl
 } = require('telegraph-uploader')
+const {
+    color
+} = require('./lib/color')
+//require("http").createServer((_, res) => res.end("Hello World!")).listen(8080)
+
 // Lectura de database
 let kuismath = db.data.game.math = []
 let vote = db.data.others.vote = []
@@ -73,6 +78,7 @@ module.exports = simple = async (simple, m, chatUpdate, store) => {
         const args = body.trim().split(/ +/).slice(1)
         const pushname = m.pushName || "No Name"
         const botNumber = await simple.decodeJid(simple.user.id)
+	const senderNumber = m.sender.split('@')[0]
         const isCreator = [botNumber, ...global.owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
         const itsMe = m.sender == botNumber ? true : false
         const text = q = args.join(" ")
@@ -391,10 +397,11 @@ conteoscmds = `${dataa.value}`
 
 //|⬡════════════════════════════════════════════|❝ Ⓒ_乂 Consola_™ ❞|═══════════════════════════════════════════⬡|//	
 
-        if (m.message) {
-            simple.readMessages([m.key])
-            console.log(chalk.black(chalk.bgWhite('[ MSG ]')), chalk.black(chalk.bgGreen(new Date)), chalk.black(chalk.bgBlue(budy || m.mtype)) + '\n' + chalk.magenta('=> De'), chalk.green(pushname), chalk.yellow(m.sender) + '\n' + chalk.blueBright('=> En'), chalk.green(m.isGroup ? pushname : 'Private Chat', m.chat))
-        }
+            if (!isGroup && !isCmd) console.log(color(`[ ${timebro} ]`, 'white'), color('[ PRIVADO ]', 'aqua'), color(body.slice(0, 50), 'white'), 'from', color(senderNumber, 'yellow'))
+    if (isGroup && !isCmd) console.log(color(`[ ${timebro} ]`, 'white'), color('[  GRUPO  ]', 'aqua'), color(body.slice(0, 50), 'white'), 'from', color(senderNumber, 'yellow'), 'in', color(groupName, 'yellow'))
+    if (!isGroup && isCmd) console.log(color(`[ ${timebro} ]`, 'white'), color('[ COMANDO ]', 'aqua'), color(body, 'white'), 'from', color(senderNumber, 'yellow'))
+    if (isGroup && isCmd) console.log(color(`[ ${timebro} ]`, 'white'), color('[ COMANDO ]', 'aqua'), color(body, 'white'), 'from', color(senderNumber, 'yellow'), 'in', color(groupName, 'yellow'))
+    
 	
 //|⬡════════════════════════════════════════════|❝ Ⓒ_乂 Reset de los límites ™ ❞|═══════════════════════════════════════════⬡|//	
 
