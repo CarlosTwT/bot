@@ -43,6 +43,9 @@ let kuismath = db.data.game.math = []
 let vote = db.data.others.vote = []
 //Database
 
+// Language
+const  { ind } = require(`./lenguajes`)
+lang = ind // lenguaje
 
 //anti virtual
 		if (m.sender.startsWith('212')) return simple.updateBlockStatus(m.sender, 'block')
