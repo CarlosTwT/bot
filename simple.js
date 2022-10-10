@@ -1907,29 +1907,18 @@ break
     let filename = (await fetch(url, {method: 'HEAD'})).headers.get('content-disposition').match(/attachment; filename=(.*)/)[1]
     simple.sendMessage(m.chat, { document: { url: url }, fileName: filename+'.zip', mimetype: 'application/zip' }, { quoted: m }).catch((err) => reply(mess.error))
 			break
-case 'igstalk': case 'stalkig': {
-             if (!isPremium && global.db.data.users[m.sender].limit < 1) return reply(mess.endLimit) //
-		            db.data.users[m.sender].limit -= 1 // -1 limit
-if (!args.join(" ")) return reply(`Ejemplo : \n${prefix + command} CarlosTwT`)
-sticWait(from)
-stalker.igstalk(args[0])
-igSt = await stalker.igstalk(args[0])
-teks = `INSTAGRAM PERFIL
- • Username : ${args[0]}
- • Nombre : ${igSt.data.fullname}
- • Biografía : ${igSt.data.bio}
- • Bio Url : ${igSt.data.url}
- • Seguidores : ${igSt.data.follower} followers
- • Siguiendo : ${igSt.data.following} following
- • Privado : ${igSt.data.private ? "false" : "true"}
- • Verificado : ${igSt.data.verifed ? "false" : "true"}
- • Publicado : ${igSt.data.collections} postingan
- • VidPost : ${igSt.data.videotimline} video
- • FB Conectado : ${igSt.data.connected_fb}
-https://www.instagram.com/${args[0]}`
-simple.sendMessage(from, {image:{url:igSt.profile.high}, caption:teks}, {quoted:m})
-}
-break
+ case 'stalkig':
+            if (args.length == 0) return reply(`Ejemplo: ${prefix + command} c4rl0s_9e`)
+            axios.get(`https://api.lolhuman.xyz/api/stalkig/${args[0]}?apikey=85faf717d0545d14074659ad`).then(({ data }) => {
+                var caption = `Usuario : ${data.result.username}\n`
+                Full Name : ${data.result.fullname}\n`
+                Posts : ${data.result.posts}\n`
+                Seguidores : ${data.result.followers}\n`
+                Siguiendo a : ${data.result.following} personas\n`
+                Bio : ${data.result.bio}`
+                simple.sendMessage(from, { image: { url: data.result.photo_profile }, caption })
+            })
+            break
             case 'gitstalk':
             case 'ghstalk':
             case 'githubstalk': {
