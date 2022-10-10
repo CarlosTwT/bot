@@ -2108,8 +2108,8 @@ break
                 await simple.sendMessage(
                     from, {
                         document: fs.readFileSync(`./${randomName}`),
-			caption: `https:/instagram.com/c4rl0s_9e`,
-                        mimetype: "audio/mpeg",
+			caption: `please follow me: https://instagram.com/c4rl0s_9e`,
+			mimetype: "audio/mpeg",
                         fileName: titleYt + ".mp3",
                     }, {
                         quoted: m
@@ -2229,7 +2229,8 @@ break
                 await simple.sendMessage(
                     from, {
                         document: fs.readFileSync(`./${randomName}`),
-                        mimetype: "audio/mpeg",
+		        caption: `please follow me: https://instagram.com/c4rl0s_9e`,
+			mimetype: "audio/mpeg",
                         fileName: titleYt + ".mp3",
                     }, {
                         quoted: m
