@@ -7,8 +7,7 @@
 // Menu
 exports.menu = (prefix) => {
 	return`
-	      Ⓒ_乂 Simple WhatsApp - Bot_
-       「  INFO BOT 」\n 𝘛𝘰𝘵𝘢𝘭 𝘏𝘪𝘵 𝘚𝘦𝘳𝘷𝘦𝘳 : ${conteocmd} \n 𝘛𝘰𝘵𝘢𝘭 𝘏𝘪𝘵 𝘛𝘰𝘥𝘢𝘺 : ${conteoscmds} \n Prefijo :  ${prefix} \n Nombre : ${botname}\n Owner : ${ownername}\n Runtime : ${runtime(process.uptime())}\n Librería : Baileys-Md\n\n   「 GRUPO 」
+\n\n   「 GRUPO 」
 » ${prefix}react
 » ${prefix}join [Gp link]
 » ${prefix}add 593xxx
