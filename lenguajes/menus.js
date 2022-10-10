@@ -67,8 +67,6 @@ exports.menu = (prefix) => {
 
 » ${prefix}setstatus
 
-» ${prefix}anticall
-
 » ${prefix}delete
 
 » ${prefix}infochat
@@ -174,10 +172,6 @@ exports.menu = (prefix) => {
 » ${prefix}ytsmusic
 
 » ${prefix}song
-
-» ${prefix}cellinfo
-
-» ${prefix}playstore
 
 » ${prefix}SsWeb
 
