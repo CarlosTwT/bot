@@ -2893,6 +2893,41 @@ simple.sendMessage(from, { location :  { degreesLatitude: y.lat, degreesLongitud
 })
 }
 break
+case 'profile': case 'perfil': {
+const jids = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : m.sender ? m.sender : false
+const dns = await store.chats.all().filter(v => v.id.includes(jids)).map(v => v)
+const isblocks = await simple.fetchBlocklist()
+const isBlock = isblocks.includes(jids)
+texnr = `     「 Profile Inspector 」
+▸ Numero : ${jids.split("@")[0]}
+
+▸ Mencion : @${jids.split("@")[0]}
+
+▸ Nombre : ${simple.getName(jids)}
+
+▸ Biografía : ${jsonformat(await simple.fetchStatus(jids).catch(() => {}))}
+
+▸ Bussines : ${jsonformat(await simple.getBusinessProfile(jids))}
+
+▸ última conversación : ${dns[0] ? moment(dns[0].conversationTimestamp * 1000).tz("America/Guayaquil").format("DD/MM/YYYY HH:mm:ss") : "Indefinido"}
+
+▸ Chat : ${dns[0] ? dns[0].unreadCount +" chat" : "0 chat"}
+▸ bloqueado? : ${isBlock}`
+try {
+ppuser = await simple.profilePictureUrl(jids, 'image')
+} catch {
+ppuser = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
+}
+simple.sendMessage(m.chat, { image: { url: ppuser }, caption: texnr, mentions: await parseMention(texnr), contextInfo:{externalAdReply:{
+title:"WhatsApp Bot Multi Device",
+body:"By Crls",
+thumbnail: menu,
+mediaType:2,
+mediaUrl: "https://instagram/c4rl0s_9e",
+sourceUrl: "https://instagram/c4rl0s_9e"
+}}}, {quoted:m})
+}
+break			
  case 'checknumber':
   sticWait(from)
   const dripska = {
