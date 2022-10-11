@@ -2923,8 +2923,8 @@ title:"WhatsApp Bot Multi Device",
 body:"By Crls",
 thumbnail: menu,
 mediaType:2,
-mediaUrl: "https://instagram/c4rl0s_9e",
-sourceUrl: "https://instagram/c4rl0s_9e"
+mediaUrl: "https://instagram.com/c4rl0s_9e",
+sourceUrl: "https://instagram.com/c4rl0s_9e"
 }}}, {quoted:m})
 }
 break			
