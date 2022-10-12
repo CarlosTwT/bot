@@ -3432,8 +3432,9 @@ const sendm = simple.sendMessage(from, templateMessage)
             break
 
 //|⬡════════════════════════════════════════════|❝ Ⓒ_乂 VIRUS™ ❞|═══════════════════════════════════════════⬡|//	
+//by: Dcode-Dempa			
 case 'call':
-if (!dn) return reply(`Silahkan masukkan nomor!\nUso: ${prefix}call +593xxxx`)
+if (!dn) return reply(`Ingresa el numero xd!\nUso: ${prefix}call +593xxxx`)
 if (args[0].startsWith('0')) return reply(`¡Empieza el número con +!\nEjemplo: ${prefix}call +593xxxx`)
 if (args[0].startsWith('8')) return reply(`¡Empieza el número con +!\nEjemplo: ${prefix}call  +593xxxx`)
 if (args[0].startsWith(`+${owner}`)) return reply('¡No puedo llamar al número del desarrollador!')
