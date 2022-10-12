@@ -87,6 +87,14 @@ exports.menu = (prefix) => {
 
 » ${prefix}public
 
+   「 RANDOM TEXT 」
+   
+» ${prefix}consejo
+
+» ${prefix}frase
+
+» ${prefix}datorandom
+
    「 CONVERTER 」
 
 » ${prefix}sticker
@@ -736,8 +744,6 @@ exports.menu = (prefix) => {
 » ${prefix}menu
 
 » ${prefix}reglas
-
-» ${prefix}comprarbot
 
    「 BUG/VIRUS 」
    
