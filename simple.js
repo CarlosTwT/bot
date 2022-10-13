@@ -1705,10 +1705,8 @@ break
   simple.sendMessage(sender, { document: fs.readFileSync('./src/database.json'), mimetype: 'json', caption: 'Una petición de : Owner', mentions: []}, { quoted: m })
   break
             case 'resize': {
-             if (!isPremium && global.db.data.users[m.sender].limit < 1) return reply(mess.endLimit) //
-		            db.data.users[m.sender].limit -= 1 // -1 limit
-    if (!m.mtype === "imageMessage") return replay("No es una imagen")
-    if (!text) return replay(`Ejemplo: ${prefix + command} 300x300`)
+    if (!m.mtype === "imageMessage") return reply("No es una imagen")
+    if (!text) return reply(`Ejemplo: ${prefix + command} 300x300`)
     let p = text.split("x")[0]
     let l = text.split("x")[1]
     let media = await simple.downloadAndSaveMediaMessage(quoted, "image")
