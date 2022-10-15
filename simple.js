@@ -120,7 +120,7 @@ module.exports = simple = async (simple, m, chatUpdate, store) => {
         return data
     }
 // DISCURSO DE TIEMPO
-const time = moment.tz('Amercia/Guayaquil').format('HH:mm:ss')
+const time = moment.tz('America/Guayaquil').format('HH:mm:ss')
 // FECHA
 var dias = ['/01/', '/02/', '/03/', '/04/', '/05/', '/06/', '/07/', '/08/', '/09/', '/10/', '/11/', '/12/'];
 var meses = ['domingo', 'lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado'];
