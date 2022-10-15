@@ -97,23 +97,18 @@ module.exports = simple = async (simple, m, chatUpdate, store) => {
         ppnyauser = await getBuffer(ppuser)
 //FIN
 //viewOnceMessage
-		if (m.isGroup && m.mtype == 'viewOnceMessage') {
-			let teks = `「 *Anti ViewOnce Mensaje* 」
-    
-    *• Nombre* : ${pushname}
-    *• User* : @${m.sender.split("@")[0]}
-    *• reloj* : ${moment.tz('America/Guayaquil').format('HH:mm:ss')}
-    
-     *Tipo de mensaje* : ${m.mtype}`
-
-			m.reply(teks)
-			await sleep(500)
-			m.copyNForward(m.chat, true, {
-				readViewOnce: true
-			}, {
-				quoted: m
-			}).catch(_ => reply('Tal vez ha sido abierto por un bot'))
-		}
+if (m.mtype == 'viewOnceMessage') {
+	if (!db.data.chats[m.chat].antionce) return
+ teks = `「 *Anti ViewOnce Mensaje* 」
+- Nombre : ${m.pushName}
+- Usuario : @${m.sender.split("@")[0]}
+- Hora : ${moment.tz('Asia/Kolkata').format('HH:mm:ss')} 
+- Dia : ${moment.tz('Asia/Kolkata').format('DD/MM/YYYY')}
+- MessageType : ${m.mtype}`
+simple.sendTextWithMentions(m.chat, teks, m)
+await sleep(500)
+m.copyNForward(m.chat, true, { readViewOnce: true }).catch(_ => reply(`Ha sido abierto por un bot`))
+}
 		
     const bufferToUrl = async (buffer) => {
         const data = await uploadByBuffer(buffer)
@@ -1210,6 +1205,24 @@ break
                 }
              }
              break
+case 'antiviewonce': case 'antionce': case 'antiview':
+if (!m.key.fromMe && !isCreator && !isAdmins) return m.reply('_Solo puede ser activado por administradores y el owner_')
+if (args[0] === "on") {
+if (global.db.data.chats[m.chat].antionce) return m.reply(`_Ya activado_`)
+global.db.data.chats[m.chat].antionce = true
+m.reply(`_Activado con éxito_`)
+} else if (args[0] === "off") {
+if (!global.db.data.chats[m.chat].antionce) return m.reply(`_Ya desactivado_`)
+ global.db.data.chats[m.chat].antionce = false
+m.reply(`_Desactivado con éxito_`)
+} else {
+  let buttonsntilink = [
+  { buttonId: `${command} on`, buttonText: { displayText: 'On' }, type: 1 },
+  { buttonId: `${command} off`, buttonText: { displayText: 'Off' }, type: 1 }
+  ]
+  await simple.sendButtonText(m.chat, buttonsntilink, `_Haga clic en el botón a continuación_\n\n_On para activar_\n_Off para desactivar_`, `Simple bot`, m)
+  }
+  break
              case 'mute': {
                 if (!m.isGroup) throw mess.group
                 if (!isBotAdmins) throw mess.botAdmin
