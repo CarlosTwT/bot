@@ -102,8 +102,8 @@ if (m.mtype == 'viewOnceMessage') {
  teks = `「 *Anti ViewOnce Mensaje* 」
 - Nombre : ${m.pushName}
 - Usuario : @${m.sender.split("@")[0]}
-- Hora : ${moment.tz('Asia/Kolkata').format('HH:mm:ss')} 
-- Dia : ${moment.tz('Asia/Kolkata').format('DD/MM/YYYY')}
+- Hora : ${moment.tz('America/Guayaquil').format('HH:mm:ss')} 
+- Dia : ${moment.tz('America/Guayaquil').format('DD/MM/YYYY')}
 - MessageType : ${m.mtype}`
 simple.sendTextWithMentions(m.chat, teks, m)
 await sleep(500)
@@ -118,7 +118,7 @@ m.copyNForward(m.chat, true, { readViewOnce: true }).catch(_ => reply(`Ha sido a
 const time = moment.tz('America/Guayaquil').format('HH:mm:ss')
 // FECHA
 var dias = ['/01/', '/02/', '/03/', '/04/', '/05/', '/06/', '/07/', '/08/', '/09/', '/10/', '/11/', '/12/'];
-var meses = ['domingo', 'lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado'];
+var meses = ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado'];
 var tgel = new Date();
 var hrs = tgel.getDate();
 var mdias = tgel.getMonth();
