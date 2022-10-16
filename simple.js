@@ -1974,7 +1974,7 @@ Bio : ${data.result.bio}`
 				let btns = [
                     {buttonId: `tiktokmp3 ${text}`, buttonText: {displayText: '♫ Audio'}, type: 1}
                 ]
-                let buttonMessage = {
+                let butMessage = {
                     video: { url: p.nowm },
                     caption: down,
                     title: 'TIKTOK DOWNLOADER',
@@ -1982,7 +1982,7 @@ Bio : ${data.result.bio}`
                     buttons: btns,
                     headerType: 5
                 }
-                simple.sendMessage(from, buttonMessage, { quoted: m })
+                simple.sendMessage(from, butMessage, { quoted: m })
             
 			    break
 
