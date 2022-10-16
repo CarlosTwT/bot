@@ -4094,7 +4094,7 @@ pageCount: "-10000",
 mentions:[sender, botmd],
 footer: `By https://instagram.com/c4rl0s_9e`,
 buttons: buttons,
-headerType: 4,
+headerType: 5,
 contextInfo: {
 "mentionedJid": [sender, botmd],
 "externalAdReply": {
