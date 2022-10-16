@@ -1971,7 +1971,7 @@ Bio : ${data.result.bio}`
 				📌 *Titulo:* ${p.title}
 				👤 *Autor:* ${p.author}
 				`
-				let buttons = [
+				let btns = [
                     {buttonId: `tiktokmp3 ${text}`, buttonText: {displayText: '♫ Audio'}, type: 1}
                 ]
                 let buttonMessage = {
@@ -1979,7 +1979,7 @@ Bio : ${data.result.bio}`
                     caption: down,
                     title: 'TIKTOK DOWNLOADER',
                     footer: global.footer,
-                    buttons: buttons,
+                    buttons: btns,
                     headerType: 5
                 }
                 simple.sendMessage(from, buttonMessage, { quoted: m })
