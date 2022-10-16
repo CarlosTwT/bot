@@ -1961,15 +1961,44 @@ Bio : ${data.result.bio}`
                 simple.send5ButImg(m.chat, teks, `© ${simple.user.name}`, buf, ghs)
             }
             break
-case 'tiktok': {
-if (!args[0]) return m.reply(`_Ingresa un link de tiktok_\nEjemplo: ${prefix + command} https://vm.tiktok.com/ZMNHKVdPJ/?k= `)
-const { author: { nickname }, video, description } = await tiktokdlv3(args[0])
-const url = video.no_watermark || video.no_watermark2 || video.no_watermark_raw
-if (!url) throw 'No puedo descargar videos!'
-tistos = `*TIKTOK DOWNLOADER*\nUsuario: ${nickname}\nDescripcion: ${description}\n© © ঔৣ͜͡Ⓒ_乂 Simple WhatsApp - Bot_ 愛`
-	simple.sendMessage(m.chat, {video: {url}, caption: tistos}, { quoted: m })
-}
-break	
+            case 'tiktoknowm':
+			case 'tiktok':
+			case 'tt':
+			    if (!text) return m.reply(`y el url?`)
+				let p = await api.downloader.tiktok(q)
+				let down = ` *TIKTOK DOWNLOADER*
+
+				📌 *Titulo:* ${p.title}
+				👤 *Autor:* ${p.author}
+				`
+				let buttons = [
+                    {buttonId: `tiktokmp3 ${text}`, buttonText: {displayText: '♫ Audio'}, type: 1}
+                ]
+                let buttonMessage = {
+                    video: { url: p.nowm },
+                    caption: down,
+                    title: 'TIKTOK DOWNLOADER',
+                    footer: global.footer,
+                    buttons: buttons,
+                    headerType: 5
+                }
+                simple.sendMessage(from, buttonMessage, { quoted: m })
+            
+			    break
+
+			case 'tiktokmp3': 
+			case 'tiktokaudio': {
+				if (!text) return m.reply(`y la url?`)
+				let aud = await api.downloader.tiktok(text)
+				let cap = ` *TIKTOK AUDIO*
+
+				📌 *Titulo:* ${aud.title}
+				👤 *Autor:* ${aud.author}
+				`
+				simple.sendMessage(from, { caption: cap, image: {url: aud.thumbnail}})
+				simple.sendMessage(from, { audio: { url: aud.audio }, mimetype: 'audio/mpeg'}, { quoted: m })
+				}
+				break	
 	    case 'yts': case 'ytsearch': {
                 if (!text) throw `Ejemplo: ${prefix + command} como le digo`
                 let yts = require("yt-search")
