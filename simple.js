@@ -415,7 +415,7 @@ conteoscmds = `${dataa.value}`
 	    let setting = global.db.data.settings[botNumber]
 	    if (new Date() * 1 - setting.status > 1000) {
 		let uptime = await runtime(process.uptime())
-		await simple.updateProfileStatus(`${simple.user.name} | Runtime : ${runtime(uptime)}\nhttps://instagram.com/c4rl0s_9e`)
+		await simple.updateProfileStatus(`${simple.user.name} | Runtime : ${runtime(uptime)} | Respondiendo a ${pushname}`)
 		setting.status = new Date() * 1
 	    }
 	}
