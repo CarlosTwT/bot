@@ -44,7 +44,7 @@ global.APIKeys = {
 //|⬡════════════════════════════════════════════|❝ Ⓒ_乂 Simple WhatsApp - Bot_™ ❞|═══════════════════════════════════════════⬡|//
 
 // Owner & Premiums
-global.owner = ['593991398786']
+global.owner = ['593991398786','51916354063']
 global.premium = ['593991398786']
 global.ownername = 'CrlsOps^'
 global.botname = '_乂 Simple - Bot_'
