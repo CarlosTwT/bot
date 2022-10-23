@@ -1,6 +1,6 @@
 {
   "name": "Simple",
-  "version": "1.5.0",
+  "version": "3.5.0",
   "description": "WhatsApp Using Lib Baileys Multi Device",
   "main": "index.js",
   "type": "commonjs",
@@ -21,7 +21,7 @@
   "author": "Carlos E..",
   "license": "MIT",
   "dependencies": {
-    "@adiwajshing/baileys": "github:KiZakiXD/Baileys",
+    "@adiwajshing/baileys": "^4.4.0",
     "@adiwajshing/keyed-db": "^0.2.4",
     "@bochilteam/scraper": "^3.0.0",
     "@develoka/angka-terbilang-js": "^1.4.2",
