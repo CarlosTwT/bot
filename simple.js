@@ -5,7 +5,7 @@
    * Esta sc es totalmente gratuita, no permito que sea usada para fines comerciales.
    * No me hago responsable del mal uso de este bot.
    * Si vas a modificar algo, no remuevas los creditos.
-   * Gracias a l0os distintos creadores de bots por ayudar en la creacion de este sc.
+   * Gracias a los distintos creadores de bots por ayudar en la creacion de este sc.
 */
 
 process.on('uncaughtException', console.error) //Safe Log Error
@@ -23,6 +23,8 @@ const stalker = require("xzons-api")
 const api = require("caliph-api");
 const hx = require("hxz-api");
 const ra = require("ra-api")
+const { EmojiAPI } = require("emoji-api")
+const emoji = new EmojiAPI()
 const TD = require('better-tord');
 const ytdl = require('ytdl-core')
 const yts = require("yt-search")
